@@ -78,31 +78,33 @@
 
         FUNCTION {
             bindings = <
-&trans  &kp LC(W)  &trans  &trans  &trans                       &kp F1           &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans     &trans  &trans  &trans  &trans      &kp F13  &kp F6           &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans     &trans  &trans  &trans  &trans      &trans   &kp KP_NUMBER_0  &trans  &trans  &trans  &kp F11
-&trans  &trans     &trans  &trans  &trans  &trans      &trans   &trans                                   &kp F12
+&kp LS(Q)       &kp LS(W)     &kp LS(E)     &kp LS(R)  &kp LS(LC(T))                     &kp EQUAL     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
+&kp LS(A)       &kp LS(S)     &kp UP        &kp LS(F)  &kp LS(G)      &trans      &none  &kp PERIOD    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
+&kp LS(Z)       &kp LEFT      &kp DOWN      &kp RIGHT  &trans         &trans      &none  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
+&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &none      &none          &trans      &none  &none                                                   &kp ASTERISK
             >;
         };
 
         NUM {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
+&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH   &kp DOLLAR  &kp PERCENT                              &kp AMPERSAND  &kp SQT    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
+&kp TAB          &kp ESC            &none      &none       &kp F5       &none       &kp UNDERSCORE  &kp PAGE_UP    &kp F7     &none                 &kp AT_SIGN            &none
+&none            &none              &none      &none       &none        &none       &trans          &kp PAGE_DOWN  &kp COMMA  &kp PERIOD            &kp COLON              &kp COLON
+&kp LEFT_SHIFT   &kp LEFT_CONTROL   &kp MINUS  &trans      &trans       &trans      &kp DEL         &trans                                                                 &kp PERIOD
             >;
         };
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
+&kp LC(Q)       &kp LC(W)  &none      &none      &trans                      &kp LC(Y)  &kp F7  &kp F8  &kp MINUS  &kp LC(P)
+&kp LC(A)       &kp LC(S)  &kp LC(D)  &kp LC(F)  &none   &trans      &trans  &trans     &kp F4  &kp F5  &kp F6     &kp LC(KP_ENTER)
+&kp LC(Z)       &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans  &trans      &trans  &kp F10    &kp F1  &kp F2  &kp F3     &trans
+&kp LEFT_SHIFT  &trans     &trans     &trans     &trans  &trans      &trans  &trans                                &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings =
+                <&inc_dec_kp 0 0>,
+                <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         MOUSE {
